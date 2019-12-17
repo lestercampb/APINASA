@@ -1,0 +1,21 @@
+form {
+    width: 30%;
+   float: left;
+    
+
+ 
+}
+
+.image {
+    float:right;
+    width: 50%; 
+    display: flex;
+    align-self: flex-start;
+    justify-content: flex-start;
+}
+
+.results{
+    width:100%;
+    float:none;
+    clear:both;
+}
