@@ -23,14 +23,19 @@ let results = 0;
 function fetchResults(e) {
     e.preventDefault(); //prevents the default nature of 
     //the form (prevents submitting data and sending post request)
+ //if(section.hasChildNodes()) {
+   //console.log(section.hasChildNodes());
+  //while (section.hasChildNodes()){
+    //section.removeChild(section.firstElementChild);
+  
+    //provides a no results message when no items are returned.
+    //added this above the json to work around an error that is 
+    //returned from the API when no results are present (stops all forward movement in code)
+   let noResults = document.createElement('h5');
+   section.appendChild(noResults);
+  noResults.textContent = 'No flare warnings issued within 30 days';
  
-   if (section.firstChild) {
-    section.removeChild(section.firstChild);
-    let noResults = document.createElement('h5');
-    section.appendChild(noResults);
-    noResults.textContent = 'No flare warnings issued within 30 days';
-  }
-  else{
+ //else{
     
 
 
@@ -92,10 +97,10 @@ First I changed the startDave value to milliseconds with the "parse" function.
             section.removeChild(section.firstChild);
           }
           let results = json.length;
-          console.log(results);
+          console.log(results); //checks the number of results present
 
           if(results === 0) {
-            console.log("No results");
+            console.log("No results"); //attempt here to show no results in console
           } else {
 
             for(let i = 0; i < results; i++ ){
@@ -131,4 +136,4 @@ First I changed the startDave value to milliseconds with the "parse" function.
         }
     
     
-    }}
+      }

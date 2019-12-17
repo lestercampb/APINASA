@@ -1,0 +1,33 @@
+body {
+    background: url(assets/background1.jpg);
+    color: white;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+h1{
+    margin-left: 40%;
+    margin-top: 5%;
+}
+
+form{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10%;
+    
+}
+
+
+
+.results{
+    width:100%;
+    margin-left: 35%;
+}
