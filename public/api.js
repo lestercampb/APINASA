@@ -23,17 +23,23 @@ let results = 0;
 function fetchResults(e) {
     e.preventDefault(); //prevents the default nature of 
     //the form (prevents submitting data and sending post request)
- //if(section.hasChildNodes()) {
-   //console.log(section.hasChildNodes());
-  //while (section.hasChildNodes()){
-    //section.removeChild(section.firstElementChild);
+// if(section.hasChildNodes()) {
+  //console.log(section.hasChildNodes());
+ // while (section.hasChildNodes()){
+   // section.removeChild(section.firstElementChild);
+ // }
   
     //provides a no results message when no items are returned.
     //added this above the json to work around an error that is 
     //returned from the API when no results are present (stops all forward movement in code)
    let noResults = document.createElement('h5');
+  //noResults.style.display = 'none'
    section.appendChild(noResults);
+  // window.setTimeout(() => {
+    //noResults.textContent = 'No flare warnings issued within 30 days';
+  //}, 2000);
   noResults.textContent = 'No flare warnings issued within 30 days';
+
  
  //else{
     
@@ -130,10 +136,9 @@ First I changed the startDave value to milliseconds with the "parse" function.
               date.textContent = `Solar Flare Warning Issued:  ${array[i].messageIssueTime}`;
               link.href = array[i].messageURL
               link.textContent = 'CLICK HERE TO VIEW WARNING'
-              
             }
           }
-        }
+        }}
     
     
-      }
+    
